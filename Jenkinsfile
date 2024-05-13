@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PYTHON = '/Users/apple/opt/anaconda3/bin/python'
+        python = '/Users/apple/opt/anaconda3/bin/python'
     }
 
     parameters {
