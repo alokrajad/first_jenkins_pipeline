@@ -5,6 +5,8 @@ def replace_values(file_path):
     # Load YAML file
     with open(file_path, 'r') as file:
         data = yaml.safe_load(file)
+        print(data)
+        print(type(data))
 
     # Perform replacement
     if data.get('x') == 5:
