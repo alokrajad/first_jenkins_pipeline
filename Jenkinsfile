@@ -1,9 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        python = '/Users/apple/opt/anaconda3/bin/python'
-    }
 
     parameters {
         string(name: 'filePath', description: 'Path to the YAML file')
@@ -23,7 +20,7 @@ pipeline {
                     def filePath = params.filePath
 
                     // Execute Python script to perform replacement
-                    sh "python replace_values.py $filePath"
+                    sh "/Users/apple/opt/anaconda3/bin/python replace_values.py $filePath"
                 }
             }
         }
