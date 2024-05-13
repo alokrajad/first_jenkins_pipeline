@@ -9,7 +9,7 @@ def replace_values(file_path):
         print(type(data))
 
     # Perform replacement
-    if data.get('x') == 5:
+    if "x" in data.keys():
         data['x'] = 3
 
     # Write back to the file
