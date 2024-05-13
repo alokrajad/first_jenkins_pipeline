@@ -14,7 +14,7 @@ def replace_values(file_path):
     with open(file_path, 'w') as file:
         yaml.dump(data, file)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: python replace_values.py <file_path>")
         sys.exit(1)
