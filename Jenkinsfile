@@ -22,7 +22,7 @@ pipeline {
                     def filePath = params.filePath
 
                     // Execute Python script to perform replacement
-                    sh "${env.PYTHON} /Users/apple/Desktop/first_jenkins_pipeline/replace_values.py $filePath"
+                    sh "${env.PYTHON} /Users/apple/Desktop/first_jenkins_pipeline/replace_value.py $filePath"
                 }
             }
         }
