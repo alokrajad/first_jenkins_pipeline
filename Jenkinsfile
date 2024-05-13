@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Replace x=5 with x=3') {
             steps {
-                sh "chmod +x r/Users/apple/Desktop/first_jenkins_pipeline/replace_value.py"
+                sh "chmod +x /Users/apple/Desktop/first_jenkins_pipeline/replace_value.py"
                 script {
                     def filePath = params.filePath
 
