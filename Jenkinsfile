@@ -1,11 +1,25 @@
 pipeline {
     agent any
-    
+
+    parameters {
+        string(name: 'filePath', description: 'Path to the YAML file')
+    }
+
     stages {
-        stage('Hello World') {
+        stage('Checkout') {
             steps {
-                // Print "Hello, world!"
-                echo 'Hello, world!'
+                // Checkout code from Git repository
+                checkout scm
+            }
+        }
+        stage('Replace x=5 with x=3') {
+            steps {
+                script {
+                    def filePath = params.filePath
+
+                    // Execute Python script to perform replacement
+                    sh "python replace_values.py $filePath"
+                }
             }
         }
     }
